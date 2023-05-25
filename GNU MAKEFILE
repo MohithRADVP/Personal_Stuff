@@ -1,0 +1,4 @@
+Developed GNU Makefile to determine how to build and manage the project. 
+Used variables and built in functions (string substitution and Shell function) for text processing in the GNU makefile.
+Developed Recipes in Makefile rules using Phone targets, Multiple Targets and specila Targets
+Extensily worked on developing Makefile Cookbooks
