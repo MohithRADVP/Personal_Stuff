@@ -1,0 +1,16 @@
+Kafka architechture is setup in the following in our organization -  
+
+Confluent Kafka makes it easy to connect your apps, systems, and your entire organization with real-time data flow and processing.
+
+
+Confluent Control Center, to monitor, view, configure, search resources on Kafka
+Event Intake API (Internal REST API that interacts with instance of Kafka; e.g. creating Event on Topic)
+
+
+
+Event Self-Service Portal: Extremely Powerful (lots that we can manage by ourselves), can create topics, events, schema registries, access control lists, routing rules, DMRs, Kafka users, generate tokens etc.
+
+
+-How we used - 
+
+We used kafka in pub sub model. Where the producer publish to the topic and the consumers who subscribe to the topic. These subscirbers consume the messages which are coming to the kafka topic. The schema we are using is AVRO (in current project, other projects used json). Coming to the code portion the way we setup is we define an integration package and then create gateway classes where we send the message to the kafka topic. The integration flow is setup in such a fashion the producer or consumer factory is mapped to the topic. The topic names are specified in config files and they are overriden in higher env depending upon the env we are in.
